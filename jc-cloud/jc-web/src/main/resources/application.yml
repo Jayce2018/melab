@@ -1,0 +1,12 @@
+#服务器配置
+server:
+  port: 8000
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
