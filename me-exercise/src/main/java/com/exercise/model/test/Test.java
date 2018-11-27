@@ -59,7 +59,6 @@ public class Test {
         book1.setAuthor("Auth");
         book1.setPrice(6.66);
         books.add(book1);
-
         Book book = new Book();
         book.setBookId(2);
         book.setName("三国演义");
