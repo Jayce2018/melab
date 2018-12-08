@@ -27,8 +27,8 @@ public class Person {
     }
 
     public enum GenderEnum {
-        GenderEnum_BOY(1, "男"),
-        GenderEnum_Girl(2, "女"),
+        GenderEnum_BOY(1, "M"),
+        GenderEnum_Girl(2, "F"),
         ;
         public Integer code;
         public String value;
