@@ -1,6 +1,6 @@
 #服务器配置
 server:
-  port: 8081
+  port: 7700
   tomcat:
     uri-encoding: UTF-8
 
