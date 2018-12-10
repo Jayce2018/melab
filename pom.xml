@@ -28,6 +28,7 @@
         <module>me-common</module>
         <module>jc-cloud</module>
         <module>me-exercise</module>
+        <module>jc-text</module>
     </modules>
 
     <dependencies>
