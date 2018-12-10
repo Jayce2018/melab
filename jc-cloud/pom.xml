@@ -7,6 +7,7 @@
         <groupId>com.jayce</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
     <modules>
@@ -32,6 +33,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
             <version>2.0.0.RELEASE</version>
+        </dependency>
+        <!--TODO web的依赖，必须加 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.0.5.RELEASE</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

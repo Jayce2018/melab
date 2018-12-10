@@ -70,13 +70,6 @@
             <artifactId>swagger-models</artifactId>
             <version>1.5.14</version>
         </dependency>
-        <!--TODO web的依赖，必须加 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>2.0.5.RELEASE</version>
-            <scope>compile</scope>
-        </dependency>
 
         <!--TODO 单元测试相关-->
         <dependency>
