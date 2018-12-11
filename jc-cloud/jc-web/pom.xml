@@ -7,7 +7,6 @@
     <groupId>com.jayce</groupId>
     <artifactId>jc-web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
     <name>jc-web</name>
     <description>Demo project for Spring Boot</description>
 

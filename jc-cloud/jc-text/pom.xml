@@ -6,8 +6,8 @@
     <groupId>com.example</groupId>
     <artifactId>jc-text</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
     <name>jc-text</name>
+    <packaging>pom</packaging>
     <description>Demo project for Spring Boot</description>
 
     <parent>

@@ -21,17 +21,6 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 
@@ -39,7 +28,6 @@
         <module>me-common</module>
         <module>jc-cloud</module>
         <module>me-exercise</module>
-        <module>jc-text</module>
     </modules>
 
     <dependencies>
