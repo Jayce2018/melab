@@ -1,4 +1,4 @@
-package com.example.jctext;
+package com.example.jctest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

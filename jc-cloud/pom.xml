@@ -12,6 +12,7 @@
 
     <modules>
         <module>jc-web</module>
+        <module>../jc-text</module>
     </modules>
 
 
