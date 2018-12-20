@@ -19,17 +19,6 @@
     </properties>
 
     <dependencies>
-        <!--增加eureka-server的依赖-->
-        <!--<dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-netflix-eureka-server</artifactId>
-            <version>2.0.0.M7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter</artifactId>
-            <version>2.0.0.M8</version>
-        </dependency>-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-netflix-eureka-server</artifactId>

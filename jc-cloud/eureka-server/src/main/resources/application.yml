@@ -1,11 +1,24 @@
+spring:
+  application:
+    name: jc-eureka
 server:
-  port: 2000
+  port: 1111
 eureka:
   instance:
     hostname: localhost
+    prefer-ip-address: true
   client:
     register-with-eureka: false
     fetch-registry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#负载设置
+ribbon:
+  eureka:
+    enabled: true
+  ReadTimeout: 100000
+  ConnectTimeout: 100000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  OkToRetryOnAllOperations: false
 

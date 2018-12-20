@@ -49,6 +49,7 @@
         </plugins>
     </build>
 
+    <!--TODO cloud集成公用包-->
     <dependencies>
         <!--TODO 框架JSON处理工具 -->
         <dependency>
@@ -159,8 +160,10 @@
         </dependency>
     </dependencies>
 
+    <!--TODO 依赖管理，统一管理依赖包版本-->
     <dependencyManagement>
         <dependencies>
+            <!--cloud-->
             <dependency>
                 <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
                 <groupId>org.springframework.cloud</groupId>
@@ -168,6 +171,12 @@
                 <version>Finchley.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <!--eureka-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-eureka</artifactId>
+                <version>1.4.5.RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

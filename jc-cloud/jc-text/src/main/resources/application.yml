@@ -5,8 +5,23 @@ server:
     uri-encoding: UTF-8
 
 spring:
+  application:
+    name: yc-test
   http:
     encoding:
       charset: UTF-8
       enabled: true
       force: true
+#注册中心配置
+eureka:
+  instance:
+    #    statusPageUrlPath: /actuator/info
+    #    healthCheckUrlPath: /actuator/health
+    #    home-page-url-path: /
+    #心跳
+    lease-renewal-interval-in-seconds: 1
+    #定义死亡
+    lease-expiration-duration-in-seconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
