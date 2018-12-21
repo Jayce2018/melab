@@ -1,12 +1,16 @@
 spring:
   application:
     name: jc-eureka
+  cloud:
+    client:
+      ipAddress: 10.0.1.22
 server:
   port: 1111
 eureka:
   instance:
     hostname: localhost
-    prefer-ip-address: true
+    prefer-ip-address: true #以IP地址注册到服务中心，相互注册使用IP地址
+    instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${server.port} #集群时用到
   client:
     register-with-eureka: false
     fetch-registry: false

@@ -15,6 +15,7 @@
         <module>jc-web</module>
         <module>jc-text</module>
         <module>eureka-server</module>
+        <module>ribbon-server</module>
     </modules>
 
 
@@ -62,7 +63,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-            <version>2.0.0.RELEASE</version>
+            <version>2.0.1.RELEASE</version>
         </dependency>
         <!--TODO web的依赖，必须加 -->
         <dependency>
@@ -176,6 +177,12 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-eureka</artifactId>
+                <version>1.4.5.RELEASE</version>
+            </dependency>
+            <!--ribbon-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-ribbon</artifactId>
                 <version>1.4.5.RELEASE</version>
             </dependency>
         </dependencies>

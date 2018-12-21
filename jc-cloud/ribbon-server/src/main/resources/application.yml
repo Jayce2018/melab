@@ -1,12 +1,12 @@
 #服务器配置
 server:
-  port: 7701
+  port: 7702
   tomcat:
     uri-encoding: UTF-8
 
 spring:
   application:
-    name: jc-text
+    name: ribbon-server
   http:
     encoding:
       charset: UTF-8
