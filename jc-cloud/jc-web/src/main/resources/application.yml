@@ -29,7 +29,5 @@ eureka:
     instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${server.port}
   client:
     service-url:
+      defaultZone: http://localhost:1111/eureka/
     #      defaultZone: http://120.26.50.186:6600/eureka/ #注册远程注册中心
-    defaultZone： http://localhost:1111/eureka/
-    healthcheck:
-      enabled: true
