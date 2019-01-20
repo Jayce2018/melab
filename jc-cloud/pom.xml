@@ -16,6 +16,7 @@
         <module>jc-text</module>
         <module>eureka-server</module>
         <module>ribbon-server</module>
+        <module>feign-api</module>
     </modules>
 
 
@@ -184,6 +185,12 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-ribbon</artifactId>
                 <version>1.4.5.RELEASE</version>
+            </dependency>
+            <!-- feign -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-feign</artifactId>
+                <version>1.4.6.RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
