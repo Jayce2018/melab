@@ -1,4 +1,4 @@
-package com.jayce.feignconsumer;
+package com.jayce.feign;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableEurekaClient
 @EnableFeignClients
 @SpringBootApplication
-public class FeignConsumerApplication {
+public class FeignApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FeignConsumerApplication.class, args);
+        SpringApplication.run(FeignApplication.class, args);
     }
 
 }

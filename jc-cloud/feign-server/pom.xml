@@ -9,10 +9,10 @@
     </parent>
 
     <groupId>com.common</groupId>
-    <artifactId>feign-api</artifactId>
+    <artifactId>feign-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>feign-api</name>
+    <name>feign-server</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
