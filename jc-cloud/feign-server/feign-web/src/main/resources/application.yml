@@ -6,7 +6,7 @@ server:
 
 spring:
   application:
-    name: feign-consumer
+    name: feign-web
   http:
     encoding:
       charset: UTF-8

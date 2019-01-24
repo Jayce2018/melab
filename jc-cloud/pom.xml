@@ -160,6 +160,13 @@
             <version>2.0.5.RELEASE</version>
             <scope>test</scope>
         </dependency>
+
+        <!--TODO feign服务调用-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+
     </dependencies>
 
     <!--TODO 依赖管理，统一管理依赖包版本-->

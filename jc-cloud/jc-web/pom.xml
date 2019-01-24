@@ -23,9 +23,16 @@
     </properties>
 
     <dependencies>
+        <!--eureka-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+        <!--feign 服务-->
+        <dependency>
+            <groupId>com.jayce</groupId>
+            <artifactId>feign-web</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
