@@ -3,7 +3,7 @@ spring:
     name: jc-eureka
   cloud:
     client:
-      ipAddress: 10.0.1.22
+      ipAddress: 127.0.0.1
 server:
   port: 1111
 eureka:

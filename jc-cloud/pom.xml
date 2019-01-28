@@ -17,6 +17,7 @@
         <module>eureka-server</module>
         <module>ribbon-server</module>
         <module>feign-server</module>
+        <module>jc-gate</module>
     </modules>
 
 
@@ -199,6 +200,13 @@
                 <artifactId>spring-cloud-starter-feign</artifactId>
                 <version>1.4.6.RELEASE</version>
             </dependency>
+            <!-- zuul -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-zuul</artifactId>
+                <version>1.4.6.RELEASE</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
