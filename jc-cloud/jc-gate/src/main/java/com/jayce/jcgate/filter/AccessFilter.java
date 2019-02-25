@@ -1,6 +1,5 @@
 package com.jayce.jcgate.filter;
 
-import com.alibaba.fastjson.JSONObject;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
@@ -10,19 +9,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
-import java.util.Collection;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Properties;
 
 @Component
 @Slf4j
@@ -101,6 +90,6 @@ public class AccessFilter extends ZuulFilter {
     }
 
     public static void main(String[] args) {
-        toUtf8("");
+        System.out.println(toUtf8(""));
     }
 }
