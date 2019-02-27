@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.URLEncoder;
+
 @RequestMapping(value = "/test")
 @RestController
 public class Test {
@@ -24,7 +26,7 @@ public class Test {
     @RequestMapping(value = "/exception", method = RequestMethod.POST)
     @ApiOperation(value = "exception", notes = "exception测试", produces = "application/json")
     public String exception() throws Exception {
-        throw new Exception("异常测试！");
+        throw new Exception(URLEncoder.encode("异常测试！", "UTF-8"));
     }
 
 

@@ -18,5 +18,6 @@ public class HelloController {
     public String sayHello() {
         //System.out.println("Hello World!");
         return testService.hello();
+        //return "Hello World!";
     }
 }

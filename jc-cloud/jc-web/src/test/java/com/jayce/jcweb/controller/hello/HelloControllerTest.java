@@ -40,4 +40,13 @@ class HelloControllerTest {
         );
         System.out.println(resultActions.andReturn().getResponse().getContentAsString());
     }
+
+    @Test
+    void sayHello() throws Exception {
+        //调用接口，传入添加的用户参数
+        ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders.post("/hello/say/hello")
+                .accept(MediaType.APPLICATION_JSON)
+        );
+        System.out.println(resultActions.andReturn().getResponse().getContentAsString());
+    }
 }

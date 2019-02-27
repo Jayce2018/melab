@@ -1,4 +1,4 @@
-#·şÎñÆ÷ÅäÖÃ
+#æœåŠ¡å™¨é…ç½®
 server:
   port: 6666
   tomcat:
@@ -12,31 +12,26 @@ spring:
       charset: UTF-8
       enabled: true
       force: true
-  cloud:
-    client:
-      ipAddress: 127.0.0.1
-#×¢²áÖĞĞÄÅäÖÃ
+#æ³¨å†Œä¸­å¿ƒé…ç½®
 eureka:
   instance:
     statusPageUrlPath: /actuator/info
     healthCheckUrlPath: /actuator/health
     home-page-url-path: /
-    #ĞÄÌø,Ä¬ÈÏ30s
+    #å¿ƒè·³,é»˜è®¤30s
     lease-renewal-interval-in-seconds: 1
-    #¶¨ÒåËÀÍö,Ä¬ÈÏ90s
+    #å®šä¹‰æ­»äº¡,é»˜è®¤90s
     lease-expiration-duration-in-seconds: 2
-    prefer-ip-address: true #ÒÔIPµØÖ·×¢²áµ½·şÎñÖĞĞÄ
-    instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${server.port}
   client:
     service-url:
       defaultZone: http://localhost:1111/eureka/
-    #      defaultZone: http://120.26.50.186:6600/eureka/ #×¢²áÔ¶³Ì×¢²áÖĞĞÄ
+    #      defaultZone: http://120.26.50.186:6600/eureka/ #æ³¨å†Œè¿œç¨‹æ³¨å†Œä¸­å¿ƒ
 
-#Íø¹ØÂ·ÓÉÅäÖÃ
+#ç½‘å…³è·¯ç”±é…ç½®
 zuul:
   ignored-services: "*"
   sensitive-headers:
-  prefix: /api #ÎªzuulÉèÖÃÒ»¸ö¹«¹²µÄÇ°×º
+  prefix: /api #ä¸ºzuulè®¾ç½®ä¸€ä¸ªå…¬å…±çš„å‰ç¼€
   routes:
     web:
       path: /web/**
@@ -48,7 +43,7 @@ zuul:
       path: /feign/**
       serviceId: feign-server
 
-#È¨ÏŞÀ¹½ØÆ÷£ºÅäÖÃºöÂÔÀ¹½ØµÄÇëÇóÂ·¾¶
+#æƒé™æ‹¦æˆªå™¨ï¼šé…ç½®å¿½ç•¥æ‹¦æˆªçš„è¯·æ±‚è·¯å¾„
 gate:
   ignore:
     startWith:

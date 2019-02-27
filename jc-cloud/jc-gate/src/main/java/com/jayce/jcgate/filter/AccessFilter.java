@@ -6,7 +6,6 @@ import com.netflix.zuul.exception.ZuulException;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
@@ -50,6 +49,7 @@ public class AccessFilter extends ZuulFilter {
         String[] urlSplits = request.getRequestURI().split(zuulUriPrefix);
         final String requestUri = urlSplits[1];
         log.info("send [{}], request to [{}]", request.getMethod(), requestUri);
+        System.out.println("请求参数："+request.getMethod()+"->"+requestUri );
         /**
          * TODO 对地址做拦截放过 startWith 需要动态配置
          */
@@ -64,13 +64,6 @@ public class AccessFilter extends ZuulFilter {
             return null;
         }
         //校验报文头
-        String token = request.getHeader("token");
-        if (null == token) {
-            ctx.addZuulResponseHeader("businessStatus", HttpStatus.BAD_REQUEST.value() + "");
-            ctx.addZuulResponseHeader("message", toUtf8("token不能为空"));
-        } else {
-            ctx.addZuulResponseHeader("businessStatus", HttpStatus.OK.value() + "");
-        }
         ctx.addZuulRequestHeader("zuul-request", "true");
         ctx.addZuulRequestHeader("zuul-requesturi", requestUri);
         ctx.addZuulRequestHeader("zuul-real-ip", request.getHeader("X-Real-IP"));
