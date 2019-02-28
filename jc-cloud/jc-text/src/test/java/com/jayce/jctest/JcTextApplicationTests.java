@@ -1,4 +1,4 @@
-package com.example.jctest;
+package com.jayce.jctest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

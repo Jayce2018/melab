@@ -204,7 +204,7 @@
                 <artifactId>spring-cloud-starter-zuul</artifactId>
                 <version>1.4.6.RELEASE</version>
             </dependency>
-            <!--TODO base基本包 -->
+            <!--TODO meSdk包 -->
             <dependency>
                 <groupId>com.jayce.common.util</groupId>
                 <artifactId>cloud-common</artifactId>
