@@ -1,5 +1,6 @@
 package com.melab.common.utils;
 
+import com.alibaba.fastjson.JSONObject;
 import com.melab.common.annotation.EnumAn;
 import com.melab.common.entity.vo.extra.Person;
 import io.swagger.annotations.ApiModelProperty;
@@ -43,7 +44,7 @@ public class AnnotationDeals {
         Person person = new Person();
         person.setGender(1);
         Person personNew = dictionary(person);
-        //System.out.println(JSONObject.toJSON(personNew));
+        System.out.println(JSONObject.toJSON(personNew));
     }
 
 }

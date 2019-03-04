@@ -36,7 +36,7 @@ public class AnnotationUtils {
         System.out.println(JSONObject.toJSON(person));
     }
 
-    @Author(value = "jayce")
+    @Author(value = "jayyyyce")
     public void authorMethod(String author) {
     }
 
@@ -46,6 +46,6 @@ public class AnnotationUtils {
         person.setPersonId(1L);
         person.setGender(1);
         enumCases(person);
-        //authorCases();
+        authorCases();
     }
 }
