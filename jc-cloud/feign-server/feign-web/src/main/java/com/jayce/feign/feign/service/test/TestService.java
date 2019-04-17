@@ -1,9 +1,11 @@
 package com.jayce.feign.feign.service.test;
 
+import com.jayce.feign.common.usual.vo.UsualFeignVO;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -22,4 +24,8 @@ public interface TestService {
     @RequestMapping(value = "/test/exception", method = RequestMethod.POST)
     @ApiOperation(value = "exception", notes = "测试feignException")
     String exception();
+
+    @RequestMapping(value = "/test/message", method = RequestMethod.POST)
+    @ApiOperation(value = "message", notes = "测试feignException")
+    String message(@Validated(UsualFeignVO.Message.class) @RequestBody UsualFeignVO usualFeignVO);
 }

@@ -5,6 +5,8 @@ server:
     uri-encoding: UTF-8
 
 spring:
+  profiles:
+    active: dev
   application:
     name: feign-web
   http:

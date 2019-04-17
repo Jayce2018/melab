@@ -4,10 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
 
 @EnableEurekaClient
 @EnableFeignClients
 @SpringBootApplication
+@ComponentScan({"com.jayce.common.aspect","com.jayce.common.util.base","com.jayce.feign"})
 public class FeignApplication {
 
     public static void main(String[] args) {

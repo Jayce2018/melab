@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableEurekaClient
 @EnableFeignClients({"com.jayce.feign.feign"})
 @MapperScan("com.jayce.jcweb.common.*")
-@ComponentScan({"com.jayce.common.aspect","com.jayce.jcweb"})
+@ComponentScan({"com.jayce.common.aspect","com.jayce.common.util.base","com.jayce.jcweb"})
 public class JcWebApplication {
     public static void main(String[] args) {
         SpringApplication.run(JcWebApplication.class, args);
