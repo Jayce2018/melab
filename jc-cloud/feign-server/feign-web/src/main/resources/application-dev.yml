@@ -1,5 +1,5 @@
 #Mybatis 打印SQL日志
-logging.level.com.jayce.jcweb.common: debug
+logging.level.com.jayce.feign.common: debug
 
 #开发数据源
 spring:

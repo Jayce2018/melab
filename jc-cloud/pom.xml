@@ -11,6 +11,7 @@
 
     <properties>
         <mapper.version>3.4.0</mapper.version>
+        <codingapi.txlcn.version>5.0.2.RELEASE</codingapi.txlcn.version>
     </properties>
 
     <modelVersion>4.0.0</modelVersion>
@@ -22,6 +23,7 @@
         <module>ribbon-server</module>
         <module>feign-server</module>
         <module>jc-gate</module>
+        <module>txlcn-tm</module>
     </modules>
 
 
@@ -197,6 +199,22 @@
         </dependency>
         <!--TODO 持久化相关包end-->
 
+        <!--TODO 分布式事务-->
+        <!--<dependency>-->
+            <!--<groupId>com.codingapi.txlcn</groupId>-->
+            <!--<artifactId>txlcn-tc</artifactId>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>com.codingapi.txlcn</groupId>-->
+            <!--<artifactId>txlcn-tm</artifactId>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>com.codingapi.txlcn</groupId>-->
+            <!--<artifactId>txlcn-txmsg-netty</artifactId>-->
+        <!--</dependency>-->
+
     </dependencies>
 
     <!--TODO 依赖管理，统一管理依赖包版本-->
@@ -278,6 +296,27 @@
                 <artifactId>mapper-spring-boot-starter</artifactId>
                 <version>1.1.2</version>
             </dependency>
+
+            <!--LCN start-->
+            <!--分布式事务客户端-->
+            <dependency>
+                <groupId>com.codingapi.txlcn</groupId>
+                <artifactId>txlcn-tc</artifactId>
+                <version>${codingapi.txlcn.version}</version>
+            </dependency>
+            <!--事务管理器-->
+            <dependency>
+                <groupId>com.codingapi.txlcn</groupId>
+                <artifactId>txlcn-tm</artifactId>
+                <version>${codingapi.txlcn.version}</version>
+            </dependency>
+            <!--事务消息接口的Netty实现-->
+            <dependency>
+                <groupId>com.codingapi.txlcn</groupId>
+                <artifactId>txlcn-txmsg-netty</artifactId>
+                <version>${codingapi.txlcn.version}</version>
+            </dependency>
+            <!--LCN end-->
         </dependencies>
     </dependencyManagement>
 

@@ -17,7 +17,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = {JcWebApplication.class})
 @WebAppConfiguration
-class HelloControllerTest {
+class HelloControllerTestController {
     /*@Autowired
     private WebApplicationContext context;*/
 

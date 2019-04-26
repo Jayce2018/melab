@@ -28,4 +28,8 @@ public interface TestService {
     @RequestMapping(value = "/test/message", method = RequestMethod.POST)
     @ApiOperation(value = "message", notes = "测试feignException")
     String message(@Validated(UsualFeignVO.Message.class) @RequestBody UsualFeignVO usualFeignVO);
+
+    @RequestMapping(value = "/test/feign/book/insert", method = RequestMethod.POST)
+    @ApiOperation(value = "feignBookInsert", notes = "测试", produces = "application/json")
+    void feignBookInsert(@RequestBody UsualFeignVO usualFeignVO);
 }

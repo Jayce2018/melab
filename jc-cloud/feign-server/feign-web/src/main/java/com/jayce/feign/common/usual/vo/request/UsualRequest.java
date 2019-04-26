@@ -2,8 +2,8 @@ package com.jayce.feign.common.usual.vo.request;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import org.hibernate.validator.constraints.NotBlank;
 
-import javax.validation.constraints.NotBlank;
 
 @Data
 public class UsualRequest {
