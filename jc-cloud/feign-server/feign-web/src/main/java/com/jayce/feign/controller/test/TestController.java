@@ -1,7 +1,6 @@
 package com.jayce.feign.controller.test;
 
 import com.codingapi.txlcn.tc.annotation.DTXPropagation;
-import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.codingapi.txlcn.tc.annotation.TxcTransaction;
 import com.jayce.common.util.base.exception.BaseException;
 import com.jayce.common.util.base.exception.ExceptionCodeUtil;
@@ -55,7 +54,7 @@ public class TestController {
     @RequestMapping(value = "/feign/book/insert", method = RequestMethod.POST)
     @ApiOperation(value = "feignBookInsert", notes = "测试", produces = "application/json")
     @TxcTransaction(propagation = DTXPropagation.SUPPORTS)
-    @LcnTransaction
+    //@LcnTransaction
     @Transactional(rollbackFor = Exception.class)
     public void feignBookInsert(@Validated(UsualFeignVO.FeignBookInsert.class)@RequestBody UsualFeignVO usualFeignVO){
         LibraryBook book=new LibraryBook();
