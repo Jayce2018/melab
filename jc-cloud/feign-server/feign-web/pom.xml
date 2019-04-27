@@ -9,7 +9,7 @@
     </parent>
     <groupId>com.jayce</groupId>
     <artifactId>feign-web</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>3.1415926</version>
     <name>feign-web</name>
     <description>Demo project for Spring Boot</description>
 

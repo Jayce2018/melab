@@ -31,7 +31,6 @@
 
     <modules>
         <module>me-common</module>
-        <module>jc-cloud</module>
         <module>me-exercise</module>
     </modules>
 

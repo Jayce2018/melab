@@ -9,6 +9,11 @@
         <relativePath/>
     </parent>
 
+    <groupId>com.jayce</groupId>
+    <artifactId>jc-cloud</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
     <properties>
         <mapper.version>3.4.0</mapper.version>
         <codingapi.txlcn.version>5.0.2.RELEASE</codingapi.txlcn.version>
@@ -26,11 +31,6 @@
         <module>txlcn-tm</module>
     </modules>
 
-
-    <groupId>com.jayce</groupId>
-    <artifactId>jc-cloud</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
 
     <build>
         <plugins>
@@ -60,6 +60,14 @@
 
     <!--TODO cloud集成公用包-->
     <dependencies>
+
+        <!--TODO rabbitmq https://mvnrepository.com/artifact/com.rabbitmq/amqp-client -->
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>5.4.3</version>
+        </dependency>
+
         <!--TODO 框架JSON处理工具 -->
         <dependency>
             <!--SON处理工具 -->
