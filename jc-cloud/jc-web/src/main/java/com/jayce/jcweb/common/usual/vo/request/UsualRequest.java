@@ -13,7 +13,7 @@ public class UsualRequest {
     @NotBlank(message = "信息不能为空", groups = {Message.class})
     private String message;
 
-    @NotNull(message = "类型不能为空", groups = {InsertBook.class})
+    @NotNull(message = "类型不能为空", groups = {OutputExcel.class,InsertBook.class})
     @ApiModelProperty(value = "type", name = "类型")
     private Integer type;
 
@@ -21,9 +21,16 @@ public class UsualRequest {
     @NotBlank(message = "书名不能为空", groups = {InsertBook.class})
     private String bookName;
 
+    @ApiModelProperty(value = "fileType", name = "文件类型")
+    @NotNull(message = "文件类型不能为空", groups = {OutputExcel.class})
+    private Integer fileType;
+
     public interface Message {
     }
 
     public interface InsertBook {
+    }
+
+    public interface OutputExcel {
     }
 }

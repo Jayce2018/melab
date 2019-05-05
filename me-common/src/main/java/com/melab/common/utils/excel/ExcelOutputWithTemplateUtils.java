@@ -31,7 +31,7 @@ public class ExcelOutputWithTemplateUtils {
     @ApiOperation(value = "网络流导出出口", notes = "exportResponse")
     public static void exportResponse(String fileName, String excelTemplateUrl, HashMap<Integer, String[][]> dateMap, HttpServletResponse response) throws Exception {
         ExcelVO excelVO = transform(fileName, excelTemplateUrl, dateMap);
-        export(excelVO.getWorkbook(), fileName, 1, excelVO.getSuffix(), null, response);
+        export(excelVO.getWorkbook(), fileName, 2, excelVO.getSuffix(), null, response);
     }
 
     @ApiOperation(value = "getWorkBook", notes = "Workbook工作薄对象")
@@ -214,9 +214,9 @@ public class ExcelOutputWithTemplateUtils {
         stringDate[3][3] = "2018-9";
         stringDate[3][4] = "sydfdasd-sadsb";
         stringDate[3][5] = "3014";
-        for (int i = 0; i < stringDate.length; i++) {
+        /*for (int i = 0; i < stringDate.length; i++) {
             System.out.println(i + "->" + stringDate[i].length);
-        }
+        }*/
         dateMap.put(1, stringDate);
         //parseExcelResource("d:/excel/测试模板.xlsx");
         exportLocal("模板结果测试", "d:/excel/mod/测试模板.xlsx", dateMap, "d:/excel");
