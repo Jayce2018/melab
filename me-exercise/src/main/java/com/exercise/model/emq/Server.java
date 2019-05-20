@@ -20,8 +20,8 @@ public class Server {
     private MqttTopic topic;
     private MqttTopic topicA;
     private MqttTopic topicB;
-    private String userName = "admin";
-    private String passWord = "password";
+    private String userName = "jayce";
+    private String passWord = "jayce";
 
     private MqttMessage message;
 

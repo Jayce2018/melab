@@ -18,8 +18,8 @@ public class Client {
     private static final String clientId = "client10086";
     private MqttClient client;
     private MqttConnectOptions options;
-    private String userName = "admin";
-    private String passWord = "password";
+    private String userName = "jayce";
+    private String passWord = "jayce";
 
     private ScheduledExecutorService scheduler;
 
