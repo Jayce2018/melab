@@ -29,6 +29,7 @@
         <module>feign-server</module>
         <module>jc-gate</module>
         <module>txlcn-tm</module>
+        <module>jc-server</module>
     </modules>
 
 
@@ -314,12 +315,33 @@
                 <artifactId>txlcn-txmsg-netty</artifactId>
                 <version>${codingapi.txlcn.version}</version>
             </dependency>
-
             <!--Excel工具包-->
             <dependency>
                 <groupId>com.jayce</groupId>
                 <artifactId>me-common</artifactId>
                 <version>2018.11.09</version>
+            </dependency>
+            <!--emq-->
+            <dependency>
+                <groupId>org.eclipse.paho</groupId>
+                <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+                <version>1.1.0</version>
+            </dependency>
+            <!-- MQTT -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-integration</artifactId>
+                <version>2.0.0.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.integration</groupId>
+                <artifactId>spring-integration-stream</artifactId>
+                <version>5.0.3.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.integration</groupId>
+                <artifactId>spring-integration-mqtt</artifactId>
+                <version>5.0.6.RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

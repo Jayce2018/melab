@@ -1,0 +1,16 @@
+#服务器配置
+server:
+  port: 7704
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  profiles:
+    active: dev
+  application:
+    name: jc-emq-consumer
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+

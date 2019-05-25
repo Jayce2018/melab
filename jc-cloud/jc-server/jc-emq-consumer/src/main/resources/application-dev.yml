@@ -1,0 +1,53 @@
+#Mybatis 打印SQL日志
+logging.level.com.jayce.jcweb.common: debug
+
+#开发数据源
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://127.0.0.1:3306/library?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true
+    lcn-log-url: jdbc:mysql://127.0.0.1:3306/tx-manager?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+tx-lcn:
+  logger:
+    enabled: true
+    driver-class-name: ${spring.datasource.driver-class-name}
+    jdbc-url: ${spring.datasource.lcn-log-url}
+    username: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+
+
+emq:
+  brokerUrl: tcp://127.0.0.1:1883
+  consumeTopic: CTS/#
+  connectedTopic: $SYS/brokers/+/clients/+/connected
+  disconnectedTopic: $SYS/brokers/+/clients/+/disconnected
+  systemTopic: $SYS/brokers/#
+  userName: jayce
+  password: jayce
+  consumeQosLevel: 0
+  produceTopic: STC
+  consumeFlag: CTS
+  produceFlag: STC
+  produceQosLevel: 0
+  cleanSession: true
+  serverConsumerClientId: LAB_CUS_CID_10086
+  serverProducerClientId: LAB_CUS_PID_10086
+  heartSecond: 30
