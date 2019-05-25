@@ -74,9 +74,9 @@ public class EMQProducerConfiguration {
             }
 
             @Override
-            @ApiOperation(value = "deliveryComplete", notes = "接收到已经发布的 QoS 1 或 QoS 2 消息的传递令牌时调用")
+            @ApiOperation(value = "deliveryComplete", notes = "消息发布成功时调用")
             public void deliveryComplete(IMqttDeliveryToken iMqttDeliveryToken) {
-                log.info("接收到已经发布的 QoS 1 或 QoS 2 消息的传递令牌");
+                log.info("消息发布成功");
             }
         });
         mqttClient.connect(connOpts);
