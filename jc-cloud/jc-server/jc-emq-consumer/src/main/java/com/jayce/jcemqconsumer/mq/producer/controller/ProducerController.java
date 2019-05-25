@@ -31,6 +31,7 @@ public class ProducerController {
         messageVO.setContent("测试发给客户端消息内容："+request.getMessage());
         messageVO.setCreateTime(new Date());
         producerService.sendSyncMessage("1008600",messageVO);
+        response.setCode("success");
         return response;
     }
 
