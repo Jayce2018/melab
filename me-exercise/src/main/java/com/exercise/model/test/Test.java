@@ -8,11 +8,10 @@ public class Test {
 
 
     public static void main(String[] args) {
-        JSONObject jsonObject=new JSONObject();
-        jsonObject.put("1","2019-04-23 14:07:18");
-        System.out.println(jsonObject.toJSONString());
-        String str=jsonObject.toJSONString();
-        JSONObject.parseObject(str);
+        int[] ints={1,2,3};
+        int index=0;
+        System.out.println(index++);
+        System.out.println(index);
     }
 
 
