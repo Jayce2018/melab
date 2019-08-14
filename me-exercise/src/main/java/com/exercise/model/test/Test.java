@@ -8,10 +8,8 @@ public class Test {
 
 
     public static void main(String[] args) {
-        int[] ints={1,2,3};
-        int index=0;
-        System.out.println(index++);
-        System.out.println(index);
+        System.out.println(Test.class.getResource("Test.class"));
+
     }
 
 

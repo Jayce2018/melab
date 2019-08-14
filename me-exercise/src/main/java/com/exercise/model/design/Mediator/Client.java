@@ -15,6 +15,7 @@ abstract class AbstractColleague{
     public abstract void transformNum(Integer num,AbstractMediator mediator);
 }
 
+
 class ColleagueA extends AbstractColleague{
     @Override
     public void transformNum(Integer num, AbstractMediator mediator) {
