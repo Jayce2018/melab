@@ -5,7 +5,7 @@ import com.exercise.model.utils.enumUtail.EnumMessage;
 import lombok.Data;
 
 @Data
-public class Book {
+public class Book implements Cloneable{
 
     private Long bookId;
 
