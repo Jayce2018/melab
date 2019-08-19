@@ -1,0 +1,10 @@
+
+{"author":"mina","typeDictionary":"魔幻书","name":"哈利波特","type":1,"bookId":10086}
+
+{"author":"mina2","typeDictionary":"魔幻书2","name":"哈利波特2","type":12,"bookId":100862}
+
+{"author":"mina3","typeDictionary":"魔幻书3","name":"哈利波特2","type":12,"bookId":100863}
+
+{"author":"mina4","typeDictionary":"魔幻书4","name":"哈利波特2","type":12,"bookId":100864}
+
+{"author":"mina5","typeDictionary":"魔幻书5","name":"哈利波特2","type":12,"bookId":100865}

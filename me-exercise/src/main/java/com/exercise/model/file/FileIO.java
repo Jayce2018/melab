@@ -1,4 +1,5 @@
 package com.exercise.model.file;
+
 import com.alibaba.fastjson.JSONObject;
 import com.exercise.model.generic.vo.Book;
 
@@ -31,19 +32,20 @@ public class FileIO {
                 System.out.println(result);
             }
 
-            /* 写入Txt文件 */
-            /*File writeName = new File("me-exercise/resource/output.txt"); // 相对路径，如果没有则要建立一个新的output.txt文件
+            //写入Txt文件
+            File writeName = new File("me-exercise/resource/output.txt"); // 相对路径，如果没有则要建立一个新的output.txt文件
             BufferedWriter out = new BufferedWriter(new FileWriter(writeName));
-            Book book=new Book();
+            Book book = new Book();
             book.setBookId(10086L);
             book.setName("哈利波特");
             book.setAuthor("mina");
             book.setType(1);
             book.setTypeDictionary("魔幻书");
+
             out.write(JSONObject.toJSON(book).toString()); // \r\n即为换行
             out.flush(); // 把缓存区内容压入文件
             System.out.println("把缓存区内容压入文件");
-            out.close(); // 最后记得关闭文件*/
+            out.close(); // 最后记得关闭文件
 
         } catch (Exception e) {
             e.printStackTrace();
