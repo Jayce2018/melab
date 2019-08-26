@@ -27,7 +27,6 @@ public class Test {
         integerBlockingQueue.add(3);
         integerBlockingQueue.add(4);
         System.out.println(integerBlockingQueue);
-
     }
 
 
