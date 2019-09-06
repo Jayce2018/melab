@@ -1,4 +1,4 @@
-package com.exercise.model.design.Singleton;
+package com.exercise.model.design.singleton;
 
 import com.alibaba.fastjson.JSONObject;
 import io.swagger.annotations.ApiModel;
@@ -20,7 +20,7 @@ import lombok.Data;
  * 以及其他我没用过的所有要求只有一个对象的场景。
  * */
 @Data
-@ApiModel(description = "单例模式",value ="Singleton")
+@ApiModel(description = "单例模式",value ="singleton")
 public class Singleton {
     private static Singleton singleton;
 

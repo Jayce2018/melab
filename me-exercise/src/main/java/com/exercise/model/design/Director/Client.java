@@ -1,7 +1,6 @@
-package com.exercise.model.design.Director;
+package com.exercise.model.design.director;
 
 
-import com.alibaba.fastjson.JSONObject;
 import lombok.Data;
 
 /**

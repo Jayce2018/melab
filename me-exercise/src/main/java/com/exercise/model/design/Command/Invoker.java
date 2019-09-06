@@ -1,4 +1,4 @@
-package com.exercise.model.design.Command;
+package com.exercise.model.design.command;
 
 /**
  * Created by 111223 on 2019/8/26.

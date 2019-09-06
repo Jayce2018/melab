@@ -1,4 +1,4 @@
-package com.exercise.model.design.Template;
+package com.exercise.model.design.template;
 
 class Sort {
     //选择排序:1

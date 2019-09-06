@@ -1,5 +1,5 @@
 //
-//package com.exercise.model.design.Factoty;
+//package com.exercise.model.design.factoty;
 //
 //import com.alibaba.fastjson.JSONObject;
 //import io.swagger.annotations.ApiModel;

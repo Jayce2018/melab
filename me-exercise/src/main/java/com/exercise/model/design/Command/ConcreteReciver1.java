@@ -1,4 +1,4 @@
-package com.exercise.model.design.Command;
+package com.exercise.model.design.command;
 
 class ConcreteReciver1 extends Receiver{
 

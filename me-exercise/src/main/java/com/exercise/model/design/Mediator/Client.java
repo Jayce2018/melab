@@ -1,4 +1,4 @@
-package com.exercise.model.design.Mediator;
+package com.exercise.model.design.mediator;
 
 import com.alibaba.fastjson.JSONObject;
 import lombok.Data;

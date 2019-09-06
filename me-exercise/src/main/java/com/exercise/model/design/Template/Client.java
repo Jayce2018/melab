@@ -1,4 +1,4 @@
-package com.exercise.model.design.Template;
+package com.exercise.model.design.template;
 
 import com.alibaba.fastjson.JSONObject;
 
