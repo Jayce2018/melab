@@ -8,12 +8,12 @@ public class FourGradeSchoolReport extends SchoolReport{
         System.out.println("....");
         System.out.println("语文60 数学100 体育60");
         System.out.println("....");
-        System.out.println("              家长签名：          ");
+        System.out.print("              家长签名：");
     }
 
     //签名
     @Override
     public void sign(String name) {
-        System.out.println("家长签名："+name);
+        System.out.print(name);
     }
 }
