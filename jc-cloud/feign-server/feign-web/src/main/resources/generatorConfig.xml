@@ -16,7 +16,7 @@
 
         <!--测试环境,查找keys:dev-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://127.0.0.1:3306/library?useUnicode=true&amp;characterEncoding=UTF8&amp;allowMultiQueries=true"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/melab?useUnicode=true&amp;characterEncoding=UTF8&amp;allowMultiQueries=true"
                         userId="root"
                         password="123456">
         </jdbcConnection>

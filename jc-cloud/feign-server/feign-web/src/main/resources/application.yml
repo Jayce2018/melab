@@ -23,7 +23,7 @@ eureka:
     #心跳,默认30s
     lease-renewal-interval-in-seconds: 1
     #定义死亡,默认90s
-    lease-expiration-duration-in-seconds: 2
+    lease-expiration-duration-in-seconds: 3
     prefer-ip-address: false #以IP地址注册到服务中心
     ip-address: 127.0.0.1
     hostname: ${eureka.instance.ip-address}
@@ -32,3 +32,15 @@ eureka:
     service-url:
       defaultZone: http://localhost:1111/eureka/
     #      defaultZone: http://120.26.50.186:6600/eureka/ #注册远程注册中心
+
+### Ribbon 配置
+ribbon:
+  # 连接超时
+  ConnectTimeout: 5000
+  # 响应超时
+  ReadTimeout: 5000
+### Feign 配置
+feign:
+  # 开启断路器（熔断器）
+  hystrix:
+    enabled: true

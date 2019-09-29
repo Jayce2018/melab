@@ -19,6 +19,20 @@
         <codingapi.txlcn.version>5.0.2.RELEASE</codingapi.txlcn.version>
     </properties>
 
+    <profiles>
+        <profile>
+            <!-- 本地环境 -->
+            <id>dev</id>
+            <properties>
+                <profiles.env>dev</profiles.env>
+                <jdbc-url>jdbc:mysql://127.0.0.1:3306/melab?allowMultiQueries=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai</jdbc-url>
+                <lcn-log-url>jdbc:mysql://127.0.0.1:3306/tx-manager?allowMultiQueries=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai</lcn-log-url>
+                <jdbc-user>root</jdbc-user>
+                <jdbc-password>123456</jdbc-password>
+            </properties>
+        </profile>
+    </profiles>
+
     <modelVersion>4.0.0</modelVersion>
 
     <modules>
@@ -34,6 +48,14 @@
 
 
     <build>
+        <resources>
+            <resource>
+                <!--指定resources插件处理哪个目录下的资源文件-->
+                <directory>src/main/resources</directory>
+                <!--打开资源过滤功能-->
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -45,8 +67,6 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-
-
         </plugins>
     </build>
 
@@ -191,6 +211,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.13</version>
         </dependency>
         <!-- 通用mapper -->
         <dependency>
@@ -201,18 +222,18 @@
 
         <!--TODO 分布式事务-->
         <!--<dependency>-->
-            <!--<groupId>com.codingapi.txlcn</groupId>-->
-            <!--<artifactId>txlcn-tc</artifactId>-->
+        <!--<groupId>com.codingapi.txlcn</groupId>-->
+        <!--<artifactId>txlcn-tc</artifactId>-->
         <!--</dependency>-->
 
         <!--<dependency>-->
-            <!--<groupId>com.codingapi.txlcn</groupId>-->
-            <!--<artifactId>txlcn-tm</artifactId>-->
+        <!--<groupId>com.codingapi.txlcn</groupId>-->
+        <!--<artifactId>txlcn-tm</artifactId>-->
         <!--</dependency>-->
 
         <!--<dependency>-->
-            <!--<groupId>com.codingapi.txlcn</groupId>-->
-            <!--<artifactId>txlcn-txmsg-netty</artifactId>-->
+        <!--<groupId>com.codingapi.txlcn</groupId>-->
+        <!--<artifactId>txlcn-txmsg-netty</artifactId>-->
         <!--</dependency>-->
 
     </dependencies>
@@ -271,11 +292,13 @@
                 <artifactId>druid</artifactId>
                 <version>1.0.28</version>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/com.alibaba/druid-spring-boot-starter -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
-                <version>1.1.0</version>
+                <version>1.1.1</version>
             </dependency>
+
 
             <!-- 持久层 -->
             <dependency>
@@ -343,6 +366,13 @@
                 <artifactId>spring-integration-mqtt</artifactId>
                 <version>5.0.6.RELEASE</version>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
+            <dependency>
+                <groupId>org.yaml</groupId>
+                <artifactId>snakeyaml</artifactId>
+                <version>1.25</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

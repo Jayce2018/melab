@@ -45,6 +45,12 @@ zuul:
     feign-server:
       path: /feign/**
       serviceId: feign-server
+  max:
+      host:
+        connections: 500
+  host:
+      socket-timeout-millis: 60000
+      connect-timeout-millis: 60000
 
 #权限拦截器：配置忽略拦截的请求路径
 gate:
@@ -55,3 +61,22 @@ gate:
     trade:
       time:
         expireSecond: 300
+
+
+#ribbon
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+
+#hystrix
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000

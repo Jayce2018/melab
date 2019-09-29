@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableFeignClients({"com.jayce.feign.feign"})
 @MapperScan("com.jayce.jcweb.common.*")
 @ComponentScan({"com.jayce.common.aspect","com.jayce.common.util.base","com.jayce.jcweb"})
-@EnableDistributedTransaction
+//@EnableDistributedTransaction
 public class JcWebApplication {
     public static void main(String[] args) {
         SpringApplication.run(JcWebApplication.class, args);

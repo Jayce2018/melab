@@ -5,10 +5,10 @@ logging.level.com.jayce.jcweb.common: debug
 spring:
   datasource:
     name: test
-    url: jdbc:mysql://127.0.0.1:3306/library?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true
-    lcn-log-url: jdbc:mysql://127.0.0.1:3306/tx-manager?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-    username: root
-    password: 123456
+    url: @jdbc-url@
+    lcn-log-url: @jdbc-url@
+    username: @jdbc-user@
+    password: @jdbc-password@
     # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver

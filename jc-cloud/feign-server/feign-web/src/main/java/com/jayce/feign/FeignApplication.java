@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @MapperScan("com.jayce.feign.common.*")
 @ComponentScan({"com.jayce.common.aspect","com.jayce.common.util.base","com.jayce.feign"})
-@EnableDistributedTransaction
+//@EnableDistributedTransaction
 public class FeignApplication {
 
     public static void main(String[] args) {

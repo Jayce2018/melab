@@ -1,5 +1,5 @@
 package com.exercise.model.design.srategy;
-
+//策略模式
 public class ZhaoYun {
     public static void main(String[] args) {
         Context context;

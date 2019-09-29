@@ -13,6 +13,19 @@ spring:
       charset: UTF-8
       enabled: true
       force: true
+
+### Ribbon 配置
+ribbon:
+  # 连接超时
+  ConnectTimeout: 5000
+  # 响应超时
+  ReadTimeout: 5000
+### Feign 配置
+feign:
+  # 开启断路器（熔断器）
+  hystrix:
+    enabled: true
+
 #注册中心配置
 eureka:
   instance:
@@ -22,7 +35,7 @@ eureka:
     #心跳,默认30s
     lease-renewal-interval-in-seconds: 1
     #定义死亡,默认90s
-    lease-expiration-duration-in-seconds: 2
+    lease-expiration-duration-in-seconds: 3
   client:
     service-url:
       defaultZone: http://127.0.0.1:1111/eureka/
