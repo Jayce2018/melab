@@ -1,5 +1,6 @@
 package com.jayce.jcweb.controller.book;
 
+import com.alibaba.fastjson.JSONObject;
 import com.jayce.jcweb.common.book.entity.LibraryBook;
 import com.jayce.jcweb.common.book.service.LibraryBookService;
 import com.jayce.jcweb.common.usual.vo.request.UsualRequest;
@@ -7,12 +8,10 @@ import com.melab.common.utils.excel.ExcelOutputWithTemplateUtils;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -21,6 +20,58 @@ import java.util.List;
 public class BookController {
     @Autowired
     private LibraryBookService libraryBookService;
+
+    @RequestMapping(value = "/bookOperate", method = {RequestMethod.GET})
+    @ApiOperation(value = "getBooks", notes = "获取图书", produces = "application/json")
+    public LibraryBook getBooks(@RequestParam Long bookId){
+        return libraryBookService.selectById(bookId);
+    }
+
+    @RequestMapping(value = "/bookOperate", method = {RequestMethod.POST})
+    @ApiOperation(value = "postBooks", notes = "修改图书", produces = "application/json")
+    public void postBooks(@RequestBody LibraryBook bookRequest){
+        bookRequest.setUpdateTime(new Date());
+        libraryBookService.updateSelectiveById(bookRequest);
+    }
+
+    @RequestMapping(value = "/bookOperate", method = {RequestMethod.PUT})
+    @ApiOperation(value = "putBooks", notes = "创建图书", produces = "application/json")
+    public void putBooks(@RequestBody UsualRequest bookRequest){
+        LibraryBook libraryBook = JSONObject.parseObject(JSONObject.toJSON(bookRequest).toString(), LibraryBook.class);
+        libraryBook.setCreateTime(new Date());
+        libraryBook.setStatus(1);
+        libraryBookService.insertSelective(libraryBook);
+    }
+
+    @RequestMapping(value = "/bookOperate", method = {RequestMethod.DELETE})
+    @ApiOperation(value = "deleteBooks", notes = "删除图书", produces = "application/json")
+    public void deleteBooks(@RequestParam Long bookId){
+        LibraryBook libraryBook=new LibraryBook();
+        libraryBook.setBookId(bookId);
+        libraryBook.setStatus(-1);
+        libraryBook.setUpdateTime(new Date());
+        libraryBookService.updateSelectiveById(libraryBook);
+    }
+
+    @RequestMapping(value = "/bookOperate", method = {RequestMethod.HEAD})
+    @ApiOperation(value = "headBooks", notes = "校验信息", produces = "application/json")
+    public void headBooks() throws Exception {
+        throw new Exception("校验不通过");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @RequestMapping(value = "/bookList", method = RequestMethod.POST)
     @ApiOperation(value = "bookList", notes = "获取所有图书", produces = "application/json")
