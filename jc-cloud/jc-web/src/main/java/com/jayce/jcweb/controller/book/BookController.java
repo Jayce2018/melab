@@ -4,15 +4,11 @@ import com.alibaba.fastjson.JSONObject;
 import com.jayce.jcweb.common.book.entity.LibraryBook;
 import com.jayce.jcweb.common.book.service.LibraryBookService;
 import com.jayce.jcweb.common.usual.vo.request.UsualRequest;
-import com.melab.common.utils.excel.ExcelOutputWithTemplateUtils;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 
 @RequestMapping(value = "/book")
@@ -59,20 +55,6 @@ public class BookController {
         throw new Exception("校验不通过");
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @RequestMapping(value = "/bookList", method = RequestMethod.POST)
     @ApiOperation(value = "bookList", notes = "获取所有图书", produces = "application/json")
     public List<LibraryBook> bookList(){
@@ -80,7 +62,7 @@ public class BookController {
     }
 
 
-    @RequestMapping(value = "/outputExcel", method = RequestMethod.POST)
+    /*@RequestMapping(value = "/outputExcel", method = RequestMethod.POST)
     @ApiOperation(value = "outputExcel", notes = "导出Excel", produces = "application/json")
     public void outputExcel(@Validated(UsualRequest.OutputExcel.class)@RequestBody UsualRequest usualRequest, HttpServletResponse response) throws Exception {
         //参数
@@ -130,6 +112,6 @@ public class BookController {
                 break;
             }
         }
-    }
+    }*/
 
 }

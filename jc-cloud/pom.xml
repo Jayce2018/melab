@@ -36,14 +36,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <modules>
-        <module>jc-web</module>
-        <module>jc-text</module>
         <module>eureka-server</module>
-        <module>ribbon-server</module>
         <module>feign-server</module>
         <module>jc-gate</module>
         <module>txlcn-tm</module>
         <module>jc-server</module>
+        <module>jc-authority</module>
+        <module>ribbon-server</module>
+        <module>jc-text</module>
+        <module>jc-web</module>
     </modules>
 
 

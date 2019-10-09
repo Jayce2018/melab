@@ -44,10 +44,12 @@
             <groupId>com.codingapi.txlcn</groupId>
             <artifactId>txlcn-txmsg-netty</artifactId>
         </dependency>
-        <dependency>
+
+        <!--excel 导出工具-->
+        <!--<dependency>
             <groupId>com.jayce</groupId>
             <artifactId>me-common</artifactId>
-        </dependency>
+        </dependency>-->
     </dependencies>
 
     <build>
@@ -89,6 +91,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <mainClass>com.jayce.jcweb.JcWebApplication</mainClass>
                     <includeSystemScope>true</includeSystemScope>
                 </configuration>
             </plugin>
