@@ -1,10 +1,12 @@
 package com.jayce.jcgate.filter;
 
+import com.jayce.feign.feign.service.test.TestService;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -40,16 +42,21 @@ public class AccessFilter extends ZuulFilter {
         return true;
     }
 
+    @Autowired
+    private TestService feignService;
+
     @Override
     public Object run() throws ZuulException {
+        //String info = feignService.feign();
+        //System.out.println("权限校验信息：" + info);
         //获取请求地址
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         //去掉公共请求网关路径部分
         String[] urlSplits = request.getRequestURI().split(zuulUriPrefix);
         final String requestUri = urlSplits[1];
-        log.info("send [{}], request to [{}]", request.getMethod(), requestUri);
-        System.out.println("请求参数："+request.getMethod()+"->"+requestUri );
+        log.info("===>send [{}], request to [{}]\n", request.getMethod(), requestUri);
+
         /**
          * TODO 对地址做拦截放过 startWith 需要动态配置
          */

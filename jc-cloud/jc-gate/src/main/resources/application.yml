@@ -44,7 +44,7 @@ zuul:
       serviceId: jc-text
     feign-server:
       path: /feign/**
-      serviceId: feign-server
+      serviceId: feign-web
   max:
       host:
         connections: 500

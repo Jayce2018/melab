@@ -17,14 +17,23 @@ spring:
 ### Ribbon 配置
 ribbon:
   # 连接超时
-  ConnectTimeout: 5000
+  ConnectTimeout: 50000
   # 响应超时
-  ReadTimeout: 5000
+  ReadTimeout: 50000
 ### Feign 配置
 feign:
   # 开启断路器（熔断器）
   hystrix:
     enabled: true
+
+#断路器超时
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000 #缺省为1000
 
 #注册中心配置
 eureka:
