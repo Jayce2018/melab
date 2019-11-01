@@ -6,7 +6,7 @@ import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
 public class RoutingSend {
-    private static final String EXCHANGE_NAME = "direct_logs";
+    private static final String EXCHANGE_NAME = "test_direct_logs";
 
     public static void execute(String host, String userName, String password, String routingKey) {
         // 配置连接工厂
@@ -25,10 +25,10 @@ public class RoutingSend {
             channel = connection.createChannel();
             // 声明一个direct交换机
             channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.DIRECT);
-            String message = "RoutingSend-" + "直连交换机！" + System.currentTimeMillis();
+            String message = "RoutingSend" + "直连交换机！" + System.currentTimeMillis();
             // 发送消息，并配置消息的路由键
             channel.basicPublish(EXCHANGE_NAME, routingKey, null, message.getBytes("UTF-8"));
-            System.out.println(" [RoutingSend] Sent '" + routingKey + "':'" + message + "'");
+            System.out.println(" [RoutingSend>>>>] Sent '" + routingKey + "':'" + message + "'");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

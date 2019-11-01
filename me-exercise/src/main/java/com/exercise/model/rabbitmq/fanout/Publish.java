@@ -6,7 +6,7 @@ import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
 public class Publish {
-    private static final String EXCHANGE_NAME = "logs";
+    private static final String EXCHANGE_NAME = "test_fanout_logs";
 
     public static void execute(String host, String userName, String password) {
         // 配置连接工厂
@@ -34,6 +34,7 @@ public class Publish {
             channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.FANOUT, false, false, null);
             String message = "Publish-" + "发送消息，扇形交换机测试！" + System.currentTimeMillis();
             // 发送消息
+            Thread.sleep(3*1000);
             channel.basicPublish(EXCHANGE_NAME, "", null, message.getBytes("UTF-8"));
             System.out.println(" [Publish] Sent '" + message + "'");
         } catch (Exception e) {

@@ -5,7 +5,7 @@ import com.rabbitmq.client.*;
 import java.io.IOException;
 
 public class Subscribe {
-    private static final String EXCHANGE_NAME = "logs";
+    private static final String EXCHANGE_NAME = "test_fanout_logs";
 
     public static void execute(String host, String userName, String password, int id) {
         // 配置连接工厂
