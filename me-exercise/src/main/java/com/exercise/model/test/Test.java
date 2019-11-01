@@ -14,13 +14,6 @@ public class Test {
 
 
     public static void main(String[] args) {
-
-        /*BlockingQueue<Integer> integerBlockingQueue=new ArrayBlockingQueue<>(3);
-        integerBlockingQueue.add(1);
-        integerBlockingQueue.add(2);
-        integerBlockingQueue.add(3);
-        integerBlockingQueue.add(4);
-        System.out.println(integerBlockingQueue);*/
         List<Integer> integerBlockingQueue= new ArrayList<Integer>(3);
         integerBlockingQueue.add(1);
         integerBlockingQueue.add(2);
