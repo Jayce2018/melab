@@ -1,7 +1,5 @@
 package com.exercise.model.rabbitmq.rpc;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -15,7 +13,6 @@ public class BasicTest {
     // 测试线程池
     private ExecutorService executorService = Executors.newFixedThreadPool(10);
 
-    @Test
     public void rpc() throws InterruptedException {
 
         // rpc服务端

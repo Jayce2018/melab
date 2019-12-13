@@ -3,7 +3,6 @@ package com.exercise.model.rabbitmq.fanout;
 import com.exercise.model.rabbitmq.pdf.Properties;
 import javafx.application.Application;
 import javafx.stage.Stage;
-import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -18,7 +17,6 @@ public class BasicTest extends Application{
     // 测试线程池
     private ExecutorService executorService = Executors.newFixedThreadPool(10);
 
-    @Test
     void publishSubscribe() throws InterruptedException {
         // 接收端
         int recNum = 2;

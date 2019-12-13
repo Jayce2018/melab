@@ -1,7 +1,5 @@
 package com.exercise.model.utils.properties;
 
-import ch.qos.logback.core.db.dialect.DBUtil;
-
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

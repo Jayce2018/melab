@@ -1,7 +1,5 @@
 package com.exercise.model.rabbitmq.head;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
@@ -17,7 +15,7 @@ public class BasicTest {
     // 测试线程池
     private ExecutorService executorService = Executors.newFixedThreadPool(10);
 
-    @Test
+
     public void header() throws InterruptedException {
 
         // 消费者1：绑定 format=pdf,type=report
