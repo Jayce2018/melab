@@ -1,0 +1,8 @@
+//设置全局代理
+git config --global http.proxy 172.17.18.80:8080
+
+//查看是否成功
+git config --get http.proxy
+172.17.18.80:8080
+
+git config --global http.sslVerify false
