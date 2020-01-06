@@ -1,33 +1,26 @@
 package com.exercise.model.test;
 
 import io.swagger.annotations.ApiModel;
-import org.apache.commons.codec.binary.Base64;
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
 
 import java.io.IOException;
+import java.util.LinkedList;
 
 @ApiModel(discriminator = "@Author:sun jie 2019/1/19 14:25")
 public class Test {
-    private static String str;
-
-    public void t() {
-
-    }
 
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, IOException {
-        String key="Hello world";
-        String base="SGVsbG8gd29ybGQ=";
-
-        BASE64Decoder decoder = new BASE64Decoder();
-        String baseKey = new String(decoder.decodeBuffer(base));
-        BASE64Encoder encoder=new BASE64Encoder();
-        //encoder.e
-        System.out.println(baseKey);
-
-        Base64 base64=new Base64();
-        String baseKey2=new String(base64.decode(base));
-        System.out.println(baseKey2);
+        Book book=new Book();
+        book.setId(1L);
+        System.out.println(book.hashCode());
+        Book book1=new Book();
+        book1.setId(1L);
+        System.out.println(book1.hashCode());
+        LinkedList<Integer> linkedList=new LinkedList<>();
+        linkedList.add(1);
+        System.out.println(linkedList.hashCode());
+        LinkedList<Integer> linkedList1=new LinkedList<>();
+        linkedList1.add(1);
+        System.out.println(linkedList1.hashCode());
     }
 }
 

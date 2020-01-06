@@ -1,5 +1,6 @@
 package com.jayce.common.util.base.service;
 
+import com.jayce.common.annotation.Translation;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.common.Mapper;
 
@@ -20,6 +21,7 @@ public abstract class BaseService<M extends Mapper<T>, T> {
         return this.mapper.selectOne(entity);
     }
 
+    @Translation
     public T selectById(Object id) {
         return this.mapper.selectByPrimaryKey(id);
     }

@@ -1,5 +1,6 @@
-package com.melab.common.entity.vo.extra;
+package com.jayce.common.VO;
 
+import com.jayce.common.annotation.FieldDict;
 import lombok.Data;
 
 import java.util.List;
@@ -10,6 +11,7 @@ public class Person {
 
     private String name;
 
+    @FieldDict(dictionaryClass = Person.GenderEnum.class)
     private Integer gender;
 
     private String genderString;
