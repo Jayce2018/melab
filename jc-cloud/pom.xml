@@ -25,10 +25,10 @@
             <id>dev</id>
             <properties>
                 <profiles.env>dev</profiles.env>
-                <jdbc-url>jdbc:mysql://10.35.104.126:3306/test?allowMultiQueries=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai</jdbc-url>
+                <jdbc-url>jdbc:mysql://10.xx.xx.xx:3306/test?allowMultiQueries=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai</jdbc-url>
                 <lcn-log-url>jdbc:mysql://127.0.0.1:3306/tx-manager?allowMultiQueries=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai</lcn-log-url>
-                <jdbc-user>DHCloud</jdbc-user>
-                <jdbc-password>Dahuacloud#1</jdbc-password>
+                <jdbc-user>xx</jdbc-user>
+                <jdbc-password>xx</jdbc-password>
             </properties>
         </profile>
     </profiles>
