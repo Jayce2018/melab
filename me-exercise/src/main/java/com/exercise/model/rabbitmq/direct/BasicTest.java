@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
 public class BasicTest extends Application {
 
     // rabbitmq的IP地址
-    private final String rabbitmq_host = "10.xx.xx.xx";
+    private final String rabbitmq_host = "xx.xx.xx.xx";
     // rabbitmq的用户名称
     private final String rabbitmq_user = "xx";
     // rabbitmq的用户密码
